@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valeriia Omelchenko - My Growth Journey at LSEG</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valeriia Omelchenko – My Growth Journey at LSEG</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+
     <style>
         :root {
             --soft-snow: #FAFAFB;
-            --blush-pink: #EFB7BA;
-            --dusty-rose: #E5C0C8;
-            --powder-blue: #CBD5F0;
+            /* Greens */
+            --blush-pink: #2A665F;  /* deep emerald */
+            --dusty-rose: #255551;  /* darkest emerald */
+            --powder-blue: #3D8176; /* muted teal */
+            /* Denim retained */
             --deep-denim: #194F92;
+            /* Contrast */
+            --sunset-orange: #F2994A;
+
             --text-dark: #2C3E50;
             --text-light: #5A6C7D;
             --shadow: rgba(0, 0, 0, 0.08);
         }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
+
+        /* RESET */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'Inter', sans-serif;
             background: var(--soft-snow);
@@ -37,98 +38,50 @@
             line-height: 1.8;
             overflow-x: hidden;
         }
-        
-        /* Typography */
+
+        /* TYPOGRAPHY */
         h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
             line-height: 1.2;
         }
-        
-        h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            color: var(--deep-denim);
-            margin-bottom: 1rem;
-        }
-        
-        h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            color: var(--deep-denim);
-            margin-bottom: 1.5rem;
-        }
-        
-        h3 {
-            font-size: clamp(1.3rem, 3vw, 1.8rem);
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-        }
-        
-        p {
-            color: var(--text-light);
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        /* Hero Section */
+        h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); color: var(--deep-denim); margin-bottom: 1rem; }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); color: var(--deep-denim); margin-bottom: 1.5rem; }
+        h3 { font-size: clamp(1.3rem, 3vw, 1.8rem); color: var(--text-dark); margin-bottom: 1rem; }
+        p  { color: var(--text-light); font-size: 1.1rem; margin-bottom: 1.5rem; }
+
+        /* HERO */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, var(--powder-blue) 0%, var(--soft-snow) 50%, rgba(239, 183, 186, 0.3) 100%);
+            background: linear-gradient(135deg, var(--dusty-rose) 0%, var(--soft-snow) 50%, rgba(37, 85, 81, 0.15) 100%);
             position: relative;
             overflow: hidden;
         }
-        
         .hero::before,
         .hero::after {
             content: '';
             position: absolute;
             border-radius: 50%;
-            opacity: 0.3;
+            opacity: 0.2;
             animation: float 20s infinite ease-in-out;
         }
-        
-        .hero::before {
-            width: 400px;
-            height: 400px;
-            background: var(--dusty-rose);
-            top: -200px;
-            right: -200px;
-        }
-        
-        .hero::after {
-            width: 300px;
-            height: 300px;
-            background: var(--powder-blue);
-            bottom: -150px;
-            left: -150px;
-            animation-delay: 10s;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0); }
-            50% { transform: translate(20px, -30px); }
-        }
-        
+        .hero::before { width: 400px; height: 400px; background: var(--blush-pink); top: -200px; right: -200px; }
+        .hero::after  { width: 300px; height: 300px; background: var(--powder-blue); bottom: -150px; left: -150px; animation-delay: 10s; }
+        @keyframes float { 0%,100% {transform: translate(0,0);} 50% {transform: translate(20px,-30px);} }
         .hero-content {
             text-align: center;
             z-index: 10;
             padding: 3rem;
             max-width: 800px;
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255,255,255,0.85);
             backdrop-filter: blur(10px);
             border-radius: 30px;
             box-shadow: 0 20px 60px var(--shadow);
         }
-        
-        .subtitle {
-            font-size: 1.3rem;
-            color: var(--dusty-rose);
-            margin-bottom: 2rem;
-            font-weight: 400;
-        }
-        
+        .subtitle { font-size: 1.3rem; color: var(--dusty-rose); margin-bottom: 2rem; font-weight: 400; }
         .quote {
             font-family: 'Playfair Display', serif;
             font-style: italic;
@@ -139,17 +92,9 @@
             border-left: 4px solid var(--blush-pink);
             text-align: left;
         }
-        
-        .quote-author {
-            font-style: normal;
-            font-weight: 600;
-            color: var(--deep-denim);
-            display: block;
-            margin-top: 1rem;
-            text-align: right;
-        }
-        
-        /* Main Content Sections */
+        .quote-author { font-style: normal; font-weight: 600; color: var(--deep-denim); display: block; margin-top: 1rem; text-align: right; }
+
+        /* SECTIONS */
         .content-section {
             min-height: 100vh;
             display: flex;
@@ -158,7 +103,6 @@
             padding: 5rem 2rem;
             position: relative;
         }
-        
         .content-wrapper {
             max-width: 1300px;
             width: 100%;
@@ -167,207 +111,72 @@
             gap: 4rem;
             align-items: center;
         }
-        
-        .text-content {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 0.8s ease-out forwards;
+        .text-content { opacity: 0; transform: translateY(20px); animation: fadeIn 0.8s ease-out forwards; }
+        @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+        .section-number { font-size: 2.5rem; margin-bottom: 1rem; opacity: 0.9; }
+        .image-container { position: relative; overflow: hidden; border-radius: 20px; box-shadow: 0 20px 60px var(--shadow); }
+        .image-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .image-container:hover img { transform: scale(1.05); }
+
+        /* dual image support */
+        .image-grid { display: grid; gap: 1rem; }
+        @media(min-width: 768px){ .image-grid { grid-template-columns: 1fr 1fr; } }
+
+        /* alternating layout */
+        .content-section:nth-child(even) .content-wrapper { direction: rtl; }
+        .content-section:nth-child(even) .text-content { direction: ltr; text-align: left; }
+
+        /* backgrounds */
+        .section-1 { background: linear-gradient(180deg, var(--soft-snow) 0%, rgba(37, 85, 81, 0.05) 100%); }
+        .section-2 { background: var(--soft-snow); }
+        .section-3 { background: linear-gradient(180deg, var(--soft-snow) 0%, rgba(37, 85, 81, 0.08) 100%); }
+        .section-4 { background: var(--soft-snow); }
+        .section-5 { background: linear-gradient(180deg, var(--soft-snow) 0%, rgba(37, 85, 81, 0.1) 100%); }
+
+        /* GALLERY */
+        .gallery-section { padding: 5rem 2rem; background: var(--soft-snow); }
+        .gallery-title { text-align: center; margin-bottom: 3rem; color: var(--deep-denim); }
+        .gallery-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+        .gallery-grid img { width: 100%; height: 100%; object-fit: cover; border-radius: 20px; box-shadow: 0 10px 30px var(--shadow); transition: transform 0.5s ease; }
+        .gallery-grid img:hover { transform: scale(1.05); }
+
+        /* FOOTER */
+        footer { background: var(--deep-denim); color: var(--soft-snow); padding: 6rem 2rem; text-align: center; }
+        footer .quote { background: rgba(255,255,255,0.1); border-color: var(--sunset-orange); color: var(--soft-snow); max-width: 700px; margin: 0 auto; border-radius: 0 20px 20px 0; }
+        footer .quote-author { color: var(--sunset-orange); }
+
+        /* PROGRESS DOTS */
+        .progress-dots { position: fixed; right: 30px; top: 50%; transform: translateY(-50%); z-index: 100; }
+        .dot { width: 12px; height: 12px; background: rgba(37, 85, 81, 0.3); border-radius: 50%; margin: 15px 0; cursor: pointer; transition: all 0.3s ease; }
+        .dot.active { background: var(--dusty-rose); transform: scale(1.3); }
+        .dot:hover { background: var(--blush-pink); }
+
+        /* responsive tweaks */
+        @media(max-width: 768px){
+            .content-wrapper { grid-template-columns: 1fr; gap: 2rem; }
+            .content-section:nth-child(even) .content-wrapper { direction: ltr; }
+            .progress-dots { display: none; }
+            .hero-content { padding: 2rem; margin: 1rem; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            .content-section { padding: 3rem 1rem; min-height: auto; }
+            .image-container { height: 300px; }
         }
-        
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .section-number {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            opacity: 0.8;
-        }
-        
-        .image-container {
-            position: relative;
-            overflow: hidden;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px var(--shadow);
-        }
-        
-        .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .image-container:hover img {
-            transform: scale(1.05);
-        }
-        
-        /* Alternating layouts */
-        .content-section:nth-child(even) .content-wrapper {
-            direction: rtl;
-        }
-        
-        .content-section:nth-child(even) .text-content {
-            direction: ltr;
-            text-align: left;
-        }
-        
-        /* Section backgrounds */
-        .section-1 {
-            background: linear-gradient(180deg, var(--soft-snow) 0%, rgba(203, 213, 240, 0.2) 100%);
-        }
-        
-        .section-2 {
-            background: var(--soft-snow);
-        }
-        
-        .section-3 {
-            background: linear-gradient(180deg, var(--soft-snow) 0%, rgba(239, 183, 186, 0.1) 100%);
-        }
-        
-        .section-4 {
-            background: var(--soft-snow);
-        }
-        
-        .section-5 {
-            background: linear-gradient(180deg, var(--soft-snow) 0%, rgba(203, 213, 240, 0.3) 100%);
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--deep-denim);
-            color: var(--soft-snow);
-            padding: 6rem 2rem;
-            text-align: center;
-        }
-        
-        footer .quote {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--blush-pink);
-            color: var(--soft-snow);
-            max-width: 700px;
-            margin: 0 auto;
-            border-radius: 0 20px 20px 0;
-        }
-        
-        footer .quote-author {
-            color: var(--blush-pink);
-        }
-        
-        /* Progress dots */
-        .progress-dots {
-            position: fixed;
-            right: 30px;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 100;
-        }
-        
-        .dot {
-            width: 12px;
-            height: 12px;
-            background: rgba(203, 213, 240, 0.5);
-            border-radius: 50%;
-            margin: 15px 0;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .dot.active {
-            background: var(--dusty-rose);
-            transform: scale(1.3);
-        }
-        
-        .dot:hover {
-            background: var(--blush-pink);
-        }
-        
-        /* Simple animations */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-        
-        .animate-on-scroll.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .content-wrapper {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .content-section:nth-child(even) .content-wrapper {
-                direction: ltr;
-            }
-            
-            .progress-dots {
-                display: none;
-            }
-            
-            .hero-content {
-                padding: 2rem;
-                margin: 1rem;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            h2 {
-                font-size: 1.5rem;
-            }
-            
-            .section-number {
-                font-size: 3rem;
-            }
-            
-            .content-section {
-                padding: 3rem 1rem;
-                min-height: auto;
-            }
-            
-            .image-container {
-                height: 300px;
-            }
-        }
-        
-        /* Links */
-        a {
-            color: var(--dusty-rose);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        a:hover {
-            color: var(--blush-pink);
-        }
-        
-        /* CTA Button */
+
+        /* CTA button */
+        a { color: var(--dusty-rose); text-decoration: none; transition: color 0.3s ease; }
+        a:hover { color: var(--blush-pink); }
         .cta-button {
             display: inline-block;
             padding: 1rem 2.5rem;
             background: var(--dusty-rose);
-            color: white;
+            color: #fff;
             border-radius: 30px;
             margin-top: 2rem;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(229, 192, 200, 0.4);
+            box-shadow: 0 5px 20px rgba(37, 85, 81, 0.4);
         }
-        
-        .cta-button:hover {
-            background: var(--blush-pink);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(229, 192, 200, 0.6);
-            color: white;
-        }
+        .cta-button:hover { background: var(--sunset-orange); transform: translateY(-2px); box-shadow: 0 8px 30px var(--sunset-orange); }
     </style>
 </head>
 <body>
@@ -379,9 +188,10 @@
         <div class="dot" data-section="section-3"></div>
         <div class="dot" data-section="section-4"></div>
         <div class="dot" data-section="section-5"></div>
+        <div class="dot" data-section="gallery"></div>
     </div>
-    
-    <!-- Hero Section -->
+
+    <!-- Hero -->
     <section class="hero" id="hero">
         <div class="hero-content">
             <h1>One Move, a Thousand Steps Forward</h1>
@@ -392,36 +202,36 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Section 1 -->
     <section class="content-section section-1" id="section-1">
         <div class="content-wrapper">
             <div class="text-content animate-on-scroll">
-                <div class="section-number">🔵</div>
-                <h2>"A Candle, a Classroom, and Courage"</h2>
+                <div class="section-number">🍃</div>
+                <h2>A Candle, a Classroom and Courage</h2>
                 <h3>Before LSEG: I was a teacher — and a fighter for stability</h3>
-                <p>For years, I worked as an English teacher in Ukraine. It wasn't just a job — it was part of who I was. I loved helping children grow, witnessing their small successes, and knowing I had made a difference.</p>
-                <p>But when the war started, everything changed. I kept working, even in the dark — literally. Some days I taught online with only candlelight or a flashlight, balancing courage and exhaustion.</p>
-                <p>Deep down, I knew I needed safety. Stability. A future where I could focus on growing instead of just surviving.</p>
-                <p>In February 2023, I left Ukraine for Poland. I had no job, no network, and no certainty. Just a quiet belief: that this wasn't the end of my story — it was the beginning of a new one.</p>
+                <p>For years I worked as an English teacher in Ukraine. It wasn't just a job — it was part of who I was. I loved helping children grow, witnessing their small successes and knowing I had made a difference.</p>
+                <p>But when the war started everything changed. I kept working even in the dark — literally. Some days I taught online with only candlelight or a flashlight balancing courage and exhaustion.</p>
+                <p>Deep down I knew I needed safety. Stability. A future where I could focus on growing instead of just surviving.</p>
+                <p>In February 2023 I left Ukraine for Poland. I had no job, no network and no certainty. Just a quiet belief that this wasn't the end of my story — it was the beginning of a new one.</p>
             </div>
             <div class="image-container animate-on-scroll">
                 <img src="image_section_1.jpg" alt="Valeriia looking at city monument" />
             </div>
         </div>
     </section>
-    
+
     <!-- Section 2 -->
     <section class="content-section section-2" id="section-2">
         <div class="content-wrapper">
             <div class="text-content animate-on-scroll">
-                <div class="section-number">🟡</div>
+                <div class="section-number">🍃</div>
                 <h2>Starting From Zero</h2>
                 <h3>I didn't just move to Poland. I reinvented myself.</h3>
                 <p>Arriving in Poland meant more than finding a new home — it meant becoming someone new.</p>
-                <p>I started from scratch. I explored every opportunity, and in that search, I remembered something from childhood: I had always imagined myself working in a big company, contributing to something meaningful.</p>
+                <p>I started from scratch. I explored every opportunity and in that search I remembered something from childhood: I had always imagined myself working in a big company contributing to something meaningful.</p>
                 <p>That childhood dream turned into action. I polished my CV and applied to LSEG.</p>
-                <p>It wasn't easy. I wasn't sure I had the right background. But I was willing to learn.</p>
+                <p>It wasn't easy. I wasn't sure I had the right background but I was willing to learn.</p>
                 <p>That willingness became the key.</p>
             </div>
             <div class="image-container animate-on-scroll">
@@ -429,34 +239,35 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Section 3 -->
     <section class="content-section section-3" id="section-3">
         <div class="content-wrapper">
             <div class="text-content animate-on-scroll">
-                <div class="section-number">🟠</div>
+                <div class="section-number">🍃</div>
                 <h2>My First Day</h2>
                 <h3>November 4: A New Beginning at LSEG</h3>
-                <p>I remember my first day clearly — the mix of excitement, nerves, and curiosity.</p>
-                <p>There was so much to take in. A new environment, new systems, new expectations. I was surrounded by professionals and processes I had never seen before.</p>
-                <p>But what stood out most was the culture: LSEG welcomed me with openness. It gave me space to ask, to listen, to grow.</p>
-                <p>I paid attention, took notes, signed up for courses, and leaned on the experience of my colleagues. Slowly but surely, I began to find my place.</p>
+                <p>I remember my first day clearly — the mix of excitement, nerves and curiosity.</p>
+                <p>There was so much to take in: a new environment, new systems, new expectations. I was surrounded by professionals and processes I had never seen before.</p>
+                <p>What stood out most was the culture: LSEG welcomed me with openness. It gave me space to ask, to listen, to grow.</p>
+                <p>I paid attention, took notes, signed up for courses and leaned on the experience of my colleagues. Slowly but surely I began to find my place.</p>
             </div>
-            <div class="image-container animate-on-scroll">
-                <img src="image_section_3_1.jpg" alt="Valeriia's first day elevator selfie" />
+            <div class="image-container image-grid animate-on-scroll">
+                <img src="image_section_3_1.jpg" alt="Elevator selfie on day one" />
+                <img src="image_section_3_2.jpg" alt="Valeriia exploring the office" />
             </div>
         </div>
     </section>
-    
+
     <!-- Section 4 -->
     <section class="content-section section-4" id="section-4">
         <div class="content-wrapper">
             <div class="text-content animate-on-scroll">
-                <div class="section-number">🟢</div>
+                <div class="section-number">🍃</div>
                 <h2>Confidence in Progress</h2>
-                <h3>Six Months Later: Still Learning, But No Longer Afraid</h3>
-                <p>Today, I work with bonds — something that once seemed far outside my world. I've built a foundation of knowledge I never imagined I'd have.</p>
-                <p>I'm part of LSEG's "Back to Uni" program, where I keep strengthening my skills. I take every opportunity to grow — and I've learned that professional development isn't a checkbox. It's a mindset.</p>
+                <h3>Six Months Later: Still Learning but No Longer Afraid</h3>
+                <p>Today I work with bonds — something that once seemed far outside my world. I've built a foundation of knowledge I never imagined I'd have.</p>
+                <p>I'm part of LSEG's "Back to Uni" program where I keep strengthening my skills. I take every opportunity to grow — and I've learned that professional development isn't a checkbox. It's a mindset.</p>
                 <p>The most important change?</p>
                 <p>I no longer doubt if I belong here. I know I do.</p>
             </div>
@@ -465,48 +276,60 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Section 5 -->
     <section class="content-section section-5" id="section-5">
         <div class="content-wrapper">
             <div class="text-content animate-on-scroll">
-                <div class="section-number">🔮</div>
+                <div class="section-number">🍃</div>
                 <h2>Still Growing</h2>
                 <h3>What's Next?</h3>
-                <p>I have big dreams — and I'm not afraid of them anymore.</p>
-                <p>One day, I'd love to grow into the world of data science. But I know that will take time, effort, and learning. I'm not in a rush. I'm building something real.</p>
-                <p>With every challenge I take on, every question I ask, and every piece of knowledge I gain, I'm investing in my future.</p>
+                <p>I have big dreams and I'm not afraid of them anymore.</p>
+                <p>One day I'd love to grow into the world of data science but I know that will take time, effort and learning. I'm not in a rush. I'm building something real.</p>
+                <p>With every challenge I take on, every question I ask and every piece of knowledge I gain I'm investing in my future.</p>
                 <p>Growth isn't a destination. It's the path I'm choosing — every single day.</p>
-                <a href="#contact" class="cta-button">Let's Connect</a>
+                <a href="https://t.me/lerchik2208" class="cta-button">Let's Connect</a>
             </div>
             <div class="image-container animate-on-scroll">
-                <img src="image_section_5.jpg" alt="Valeriia professional portrait" />
+                <img src="image_section_5.jpg" alt="Professional portrait" />
             </div>
         </div>
     </section>
-    
-    <!-- Footer -->
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <h2 class="gallery-title">This is how it began</h2>
+        <div class="gallery-grid animate-on-scroll">
+            <img src="child0.jpg" alt="Team brainstorming session" />
+            <img src="child1.jpg" alt="Volunteering event" />
+            <img src="child3.jpg" alt="Conference attendance" />
+            <img src="child2.jpg" alt="Celebrating a milestone" />
+            <img src="child4.jpg" alt="Weekend hiking trip" />
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
     <footer id="contact">
         <div class="quote">
-            I once helped children believe in themselves.<br>
-            Now, in a new role, in a new world — I've learned to believe in myself.<br>
-            That's what growth looks like.
+            I once helped children believe in themselves.<br />
+            Now in a new role in a new world — I've learned to believe in myself.<br /><br />
+            Growth doesn’t happen all at once — it happens every time you don’t give up.
             <span class="quote-author">– Valeriia Omelchenko</span>
         </div>
     </footer>
-    
+
     <script>
         // Progress dots navigation
         const dots = document.querySelectorAll('.dot');
         const sections = document.querySelectorAll('section[id]');
-        
+
         dots.forEach(dot => {
             dot.addEventListener('click', () => {
                 const sectionId = dot.getAttribute('data-section');
                 document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
             });
         });
-        
+
         // Update active dot on scroll
         window.addEventListener('scroll', () => {
             let current = '';
@@ -517,7 +340,6 @@
                     current = section.getAttribute('id');
                 }
             });
-            
             dots.forEach(dot => {
                 dot.classList.remove('active');
                 if (dot.getAttribute('data-section') === current) {
@@ -525,32 +347,23 @@
                 }
             });
         });
-        
-        // Animate elements on scroll
+
+        // Animate on scroll
         const animateElements = document.querySelectorAll('.animate-on-scroll');
-        
-        const observer = new IntersectionObserver((entries) => {
+        const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                 }
             });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        });
-        
-        animateElements.forEach(el => {
-            observer.observe(el);
-        });
-        
+        }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' });
+        animateElements.forEach(el => observer.observe(el));
+
         // Smooth scroll for links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', e => {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                document.querySelector(anchor.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
         });
     </script>
