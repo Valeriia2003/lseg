@@ -37,6 +37,7 @@
             color: var(--text-dark);
             line-height: 1.8;
             overflow-x: hidden;
+            scroll-snap-type: y mandatory;
         }
 
         /* TYPOGRAPHY */
@@ -59,6 +60,7 @@
             background: linear-gradient(135deg, var(--dusty-rose) 0%, var(--soft-snow) 50%, rgba(37, 85, 81, 0.15) 100%);
             position: relative;
             overflow: hidden;
+            scroll-snap-align: start;
         }
         .hero::before,
         .hero::after {
@@ -102,6 +104,7 @@
             justify-content: center;
             padding: 5rem 2rem;
             position: relative;
+            scroll-snap-align: start;
         }
         .content-wrapper {
             max-width: 1300px;
@@ -135,14 +138,24 @@
         .section-6 { background: var(--soft-snow); }
 
         /* GALLERY */
-        .gallery-section { padding: 5rem 2rem; background: var(--soft-snow); }
+        .gallery-section {
+            padding: 5rem 2rem;
+            background: var(--soft-snow);
+            scroll-snap-align: start;
+        }
         .gallery-title { text-align: center; margin-bottom: 3rem; color: var(--deep-denim); }
         .gallery-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
         .gallery-grid img { width: 100%; height: 100%; object-fit: cover; border-radius: 20px; box-shadow: 0 10px 30px var(--shadow); transition: transform 0.5s ease; }
         .gallery-grid img:hover { transform: scale(1.05); }
 
         /* FOOTER */
-        footer { background: var(--deep-denim); color: var(--soft-snow); padding: 6rem 2rem; text-align: center; }
+        footer {
+            background: var(--deep-denim);
+            color: var(--soft-snow);
+            padding: 6rem 2rem;
+            text-align: center;
+            scroll-snap-align: start;
+        }
         footer .quote { background: rgba(255,255,255,0.1); border-color: var(--sunset-orange); color: var(--soft-snow); max-width: 700px; margin: 0 auto; border-radius: 0 20px 20px 0; }
         footer .quote-author { color: var(--sunset-orange); }
 
